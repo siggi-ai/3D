@@ -1,5 +1,6 @@
 //Scene
 const scene = new THREE.Scene()
+scene.background = new THREE.Color(0x00ff00)
 
 //Red Cube
 const geometry = new THREE.BoxGeometry(1, 1, 1)
@@ -9,15 +10,15 @@ scene.add(mesh)
 
 //Sizes
 const sizes = {
-    width: 800,
-    height: 600
+    width: 900,
+    height: 700
 }
 
 //Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
 camera.position.z = 3
-/* camera.position.x = 1
-camera.position.y = -1 */
+camera.position.x = 1
+camera.position.y = -1
 scene.add(camera)
 
 //Renderer

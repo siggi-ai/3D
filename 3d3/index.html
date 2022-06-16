@@ -23,6 +23,13 @@
 
 			camera.position.z = 4;
 
+            var spotLight = new THREE.SpotLight(0xFFFFFF);
+            spotLight.position.set(-40, 40, -15);
+            spotLight.castShadow = true;
+            spotLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
+            spotLight.shadow.camera.far = 130;
+            spotLight.shadow.camera.near = 40;
+
 			function animate() {
 				requestAnimationFrame( animate );
 

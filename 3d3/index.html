@@ -18,6 +18,9 @@
 			var light = new THREE.DirectionalLight(0x404040, 0.5);
 			scene.add(light);
 
+			var light = new THREE.HemisphereLight(0x404040, 0xFFFFFF, 0.5);
+			scene.add(light);
+
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );

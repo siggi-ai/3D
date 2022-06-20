@@ -1,6 +1,7 @@
 (function () {
 
  function init() {
+    var stats = initStats();
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     var renderer = new THREE.WebGLRenderer();
@@ -51,9 +52,27 @@
     camera.position.set(-30, 40, 30);
     camera.lookAt(scene.position);
 
+    function renderScene() {
+        stats.update();
+        requestAnimationFrame(renderScene);
+        renderer.render(scene, camera);
+    }
+
+    function initStats(type) {
+
+        var panelType = (typeof type !== 'undefined' && type) && (!isNaN(type)) ? parseInt(type) : 0;
+        var stats = new Stats();
+    
+        stats.showPanel(panelType); // 0: fps, 1: ms, 2: mb, 3+: custom
+        document.body.appendChild(stats.dom);
+    
+        return stats;
+    }
+
     document.getElementById("webgl-output").appendChild(renderer.domElement);
 
-    renderer.render(scene, camera);
+    /* renderer.render(scene, camera); */
+    renderScene();
 }
 
 init()

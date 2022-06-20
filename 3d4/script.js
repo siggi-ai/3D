@@ -1,5 +1,7 @@
 (function () {
 
+    console.log(THREE);
+
  function init() {
     var stats = initStats();
     var scene = new THREE.Scene();
@@ -66,6 +68,7 @@
     var step = 0;
 
     function renderScene() {
+        trackballControls.update(clock.getDelta());
         stats.update();
         /* cube.rotation.x += 0.02;
         cube.rotation.y += 0.02;
@@ -90,6 +93,8 @@
     }
 
     document.getElementById("webgl-output").appendChild(renderer.domElement);
+    var trackballControls = initTrackballControls(camera, renderer);
+    var clock = new THREE.Clock();
 
     /* renderer.render(scene, camera); */
     renderScene();

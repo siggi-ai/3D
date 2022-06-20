@@ -54,18 +54,18 @@
 
     function renderScene() {
         stats.update();
+        cube.rotation.x += 0.02;
+        cube.rotation.y += 0.02;
+        cube.rotation.z += 0.02;
         requestAnimationFrame(renderScene);
         renderer.render(scene, camera);
     }
 
     function initStats(type) {
-
         var panelType = (typeof type !== 'undefined' && type) && (!isNaN(type)) ? parseInt(type) : 0;
         var stats = new Stats();
-    
         stats.showPanel(panelType); // 0: fps, 1: ms, 2: mb, 3+: custom
         document.body.appendChild(stats.dom);
-    
         return stats;
     }
 

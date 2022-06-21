@@ -16,6 +16,8 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true; 
 
+    /* scene.overrideMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff}); */
+
     window.addEventListener('resize', onResize, false); 
 
     var axes = new THREE.AxesHelper(20);

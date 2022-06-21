@@ -9,7 +9,7 @@
  function init() {
     var stats = initStats();
     scene = new THREE.Scene();
-    scene.fog = new THREE.Fog( 0xffffff, 0.015, 100);
+    scene.fog = new THREE.Fog( 0x00ffff, 0.015, 180);
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     renderer = new THREE.WebGLRenderer();
     renderer.setClearColor(new THREE.Color(0x000000));

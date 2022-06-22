@@ -6,7 +6,7 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const geometry = new THREE.TorusKnotGeometry( 8, 1, 90, 13 );
-const material = new THREE.MeshLambertMaterial( { color: 0xff00ff } );
+const material = new THREE.MeshLambertMaterial( { color: 0x00ecff } );
 const torusKnot = new THREE.Mesh( geometry, material );
 scene.add( torusKnot );
 

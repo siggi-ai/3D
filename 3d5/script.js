@@ -22,7 +22,7 @@ scene.add(spotLight);
 
 
 function renderScene() {
-    torusKnot.rotation.x += 0.02;
+    torusKnot.rotation.x += 0.01;
     torusKnot.rotation.y += 0.02;
     torusKnot.rotation.z += 0.02;
     requestAnimationFrame(renderScene);

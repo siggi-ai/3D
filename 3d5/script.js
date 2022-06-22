@@ -20,6 +20,9 @@ var spotLight = new THREE.SpotLight(0xFFFFFF);
     spotLight.shadow.camera.near = 40;
 scene.add(spotLight);
 
+const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
+
 
 function renderScene() {
     torusKnot.rotation.x += 0.01;

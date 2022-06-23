@@ -10,6 +10,11 @@ const material = new THREE.MeshLambertMaterial( { color: 0x00adff } );
 const torusKnot = new THREE.Mesh( geometry, material );
 scene.add( torusKnot );
 
+const geometry2 = new THREE.TorusKnotGeometry( 5, 1, 90, 13 );
+const material2 = new THREE.MeshLambertMaterial( { color: 0x0000ff } );
+const torusKnot2 = new THREE.Mesh( geometry2, material2 );
+scene.add( torusKnot2 );
+
 camera.position.z = 40;
 
 var spotLight = new THREE.SpotLight(0xFFFFFF);
@@ -28,6 +33,9 @@ function renderScene() {
     torusKnot.rotation.x += 0.01;
     torusKnot.rotation.y += 0.02;
     torusKnot.rotation.z += 0.02;
+    torusKnot2.rotation.x += 0.04;
+    torusKnot2.rotation.y += 0.05;
+    torusKnot2.rotation.z += 0.01;
     requestAnimationFrame(renderScene);
     renderer.render(scene, camera);
 }

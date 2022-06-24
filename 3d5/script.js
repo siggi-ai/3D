@@ -6,17 +6,17 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const geometry = new THREE.TorusKnotGeometry( 5, 2, 90, 13 );
-const material = new THREE.MeshLambertMaterial( { color: 0x00adff } );
+const material = new THREE.MeshLambertMaterial( { color: 0x0000ff } );
 const torusKnot = new THREE.Mesh( geometry, material );
 scene.add( torusKnot );
 
-const geometry2 = new THREE.TorusKnotGeometry( 5, 1, 90, 13 );
+const geometry2 = new THREE.TorusKnotGeometry( 6, 1, 90, 13 );
 const material2 = new THREE.MeshLambertMaterial( { color: 0x0000ff } );
 const torusKnot2 = new THREE.Mesh( geometry2, material2 );
 scene.add( torusKnot2 );
 
-const geometry3 = new THREE.SphereGeometry( 6, 32, 16 );
-const material3 = new THREE.MeshLambertMaterial( { color: 0x00ffff } );
+const geometry3 = new THREE.SphereGeometry( 9, 32, 16 );
+const material3 = new THREE.MeshLambertMaterial( { color: 0x0000ff } );
 const sphere3 = new THREE.Mesh( geometry3, material3 );
 scene.add( sphere3 );
 

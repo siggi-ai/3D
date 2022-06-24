@@ -16,7 +16,7 @@ const torusKnot2 = new THREE.Mesh( geometry2, material2 );
 scene.add( torusKnot2 );
 
 const geometry3 = new THREE.SphereGeometry( 6, 32, 16 );
-const material3 = new THREE.MeshLambertMaterial( { color: 0xff0000 } );
+const material3 = new THREE.MeshLambertMaterial( { color: 0x00ffff } );
 const sphere3 = new THREE.Mesh( geometry3, material3 );
 scene.add( sphere3 );
 

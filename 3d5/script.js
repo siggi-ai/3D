@@ -36,11 +36,11 @@ scene.add( light );
 
 function renderScene() {
     torusKnot.rotation.x += 0.01;
-    torusKnot.rotation.y += 0.02;
-    torusKnot.rotation.z += 0.02;
-    torusKnot2.rotation.x += 0.04;
-    torusKnot2.rotation.y += 0.05;
-    torusKnot2.rotation.z += 0.01;
+    torusKnot.rotation.y += 0.01;
+    torusKnot.rotation.z += 0.01;
+    torusKnot2.rotation.x += 0.008;
+    torusKnot2.rotation.y += 0.008;
+    torusKnot2.rotation.z += 0.009;
     requestAnimationFrame(renderScene);
     renderer.render(scene, camera);
 }

@@ -14,18 +14,30 @@ function init() {
 
 
     //plane1
-    var planeGeometry = new THREE.PlaneGeometry(15, 25);
+    var planeGeometry = new THREE.PlaneGeometry(35, 75);
     var planeMaterial = new THREE.MeshLambertMaterial({
         color: 0xff00ff,
     });
 
     var plane = new THREE.Mesh(planeGeometry, planeMaterial);
-    plane.rotation.x = -0.0 * Math.PI;
+    plane.rotation.x = -0.5 * Math.PI;
     plane.position.set(2, 5, -1);
     plane.receiveShadow = true;
     scene.add(plane);
 
-    // plane2
+    //plane2
+    var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
+    var planeMaterial2 = new THREE.MeshLambertMaterial({
+        color: 0xff00ff,
+    });
+
+    var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
+    plane2.rotation.x = -0.0 * Math.PI;
+    plane2.position.set(2, 5, -1);
+    plane2.receiveShadow = true;
+    scene.add(plane2);
+
+
     var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
     var planeMaterial2 = new THREE.MeshLambertMaterial({
         color: 0xff00ff,
@@ -81,7 +93,7 @@ function init() {
     });
 
     var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
-    plane2.rotation.x = -0.5 * Math.PI;
+    plane2.rotation.x = -0.51 * Math.PI;
     plane2.position.set(2, 5, -1);
     plane2.receiveShadow = true;
     scene.add(plane2);
@@ -98,13 +110,43 @@ function init() {
     plane2.receiveShadow = true;
     scene.add(plane2);
 
-    
+    // plane7
+    var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
+    var planeMaterial2 = new THREE.MeshLambertMaterial({
+        color: 0xff00ff,
+    });
 
     var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
-    plane2.rotation.x = -0.9 * Math.PI;
+    plane2.rotation.x = 0.1 * Math.PI;
     plane2.position.set(2, 5, -1);
     plane2.receiveShadow = true;
     scene.add(plane2);
+
+    // plane8
+    var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
+    var planeMaterial2 = new THREE.MeshLambertMaterial({
+        color: 0xff00ff,
+    });
+
+    var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
+    plane2.rotation.x = 0.2 * Math.PI;
+    plane2.position.set(2, 5, -1);
+    plane2.receiveShadow = true;
+    scene.add(plane2);
+
+    // plane9
+    var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
+    var planeMaterial2 = new THREE.MeshLambertMaterial({
+        color: 0xff00ff,
+    });
+
+    var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
+    plane2.rotation.x = -0.7 * Math.PI;
+    plane2.position.set(2, 5, -1);
+    plane2.receiveShadow = true;
+    scene.add(plane2);
+
+
 
     //Light
     var spotLight = new THREE.SpotLight(0xFFFFFF);

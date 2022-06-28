@@ -16,7 +16,7 @@ function init() {
     //plane1
     var planeGeometry = new THREE.PlaneGeometry(15, 25);
     var planeMaterial = new THREE.MeshLambertMaterial({
-        color: 0xAAAAAA,
+        color: 0xff00ff,
     });
 
     var plane = new THREE.Mesh(planeGeometry, planeMaterial);
@@ -86,7 +86,7 @@ function init() {
     plane2.receiveShadow = true;
     scene.add(plane2);
 
-    // plane5
+    // plane6
     var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
     var planeMaterial2 = new THREE.MeshLambertMaterial({
         color: 0xff00ff,
@@ -98,9 +98,17 @@ function init() {
     plane2.receiveShadow = true;
     scene.add(plane2);
 
+    
 
+    var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
+    plane2.rotation.x = -0.9 * Math.PI;
+    plane2.position.set(2, 5, -1);
+    plane2.receiveShadow = true;
+    scene.add(plane2);
+
+    //Light
     var spotLight = new THREE.SpotLight(0xFFFFFF);
-    spotLight.position.set(-40, 40, 1);
+    spotLight.position.set(-40, 40, 15);
     spotLight.castShadow = true;
     spotLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
     spotLight.shadow.camera.far = 130;

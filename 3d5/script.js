@@ -5,13 +5,13 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const geometry = new THREE.TorusKnotGeometry( 5, 2, 90, 13 );
-const material = new THREE.MeshLambertMaterial( { color: 0x0000ff } );
+const geometry = new THREE.TorusKnotGeometry( 5, 1.8, 90, 13 );
+const material = new THREE.MeshLambertMaterial( { color: 0xff00ff } );
 const torusKnot = new THREE.Mesh( geometry, material );
 scene.add( torusKnot );
 
 const geometry2 = new THREE.TorusKnotGeometry( 6, 1, 90, 13 );
-const material2 = new THREE.MeshLambertMaterial( { color: 0x0000ff } );
+const material2 = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
 const torusKnot2 = new THREE.Mesh( geometry2, material2 );
 scene.add( torusKnot2 );
 

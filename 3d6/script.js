@@ -14,16 +14,27 @@ function init() {
 
 
    
-    var planeGeometry = new THREE.PlaneGeometry(100, 100);
+    var planeGeometry = new THREE.PlaneGeometry(50, 50);
     var planeMaterial = new THREE.MeshLambertMaterial({
         color: 0xAAAAAA,
     });
    
     var plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.rotation.x = -0.5 * Math.PI;
-    plane.position.set(15, 0, 0); 
+    plane.position.set(10, 0, 0); 
     plane.receiveShadow = true; 
     scene.add(plane);
+
+    var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
+    var planeMaterial2 = new THREE.MeshLambertMaterial({
+        color: 0xf4ffff,
+    });
+   
+    var plane2 = new THREE.Mesh(planeGeometry2, planeMaterial2);
+    plane2.rotation.x = -0.1 * Math.PI;
+    plane2.position.set(2, 5, -1); 
+    plane2.receiveShadow = true; 
+    scene.add(plane2);
 
    
 

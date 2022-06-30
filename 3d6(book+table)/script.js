@@ -13,11 +13,26 @@ function init() {
     renderer.shadowMap.enabled = true;
 
 
-    //plane1
+
+    //plane1 (table)
     var planeGeometry = new THREE.PlaneGeometry(35, 75);
     var planeMaterial = new THREE.MeshLambertMaterial({
-        color: 0xff00ff,
+        color: 0x16bd00,
     });
+
+    console.log(planeMaterial.color);
+
+    //GUI
+    var controls = new function() { 
+        this.planeMaterial = { color : '#ffae23' }; 
+      } 
+
+    var gui = new dat.GUI(); 
+    var conf = { color : '#ffae23' };    
+    gui.addColor(conf, 'color').onChange( function(colorValue) {
+    planeMaterial.color.set(colorValue);
+    });
+
 
     var plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.rotation.x = -0.5 * Math.PI;
@@ -25,7 +40,7 @@ function init() {
     plane.receiveShadow = true;
     scene.add(plane);
 
-    //plane2
+    //plane2 (book)
     var planeGeometry2 = new THREE.PlaneGeometry(15, 25);
     var planeMaterial2 = new THREE.MeshLambertMaterial({
         color: 0xff00ff,
@@ -165,6 +180,7 @@ function init() {
 
 
     function renderScene() {
+        stats.update();
         renderer.render(scene, camera);
     }
 

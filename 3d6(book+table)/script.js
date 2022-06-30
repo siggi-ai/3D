@@ -1,4 +1,4 @@
-(function () {
+
 
 var camera;
 var scene;
@@ -198,4 +198,3 @@ function init() {
 
 init()
 
-})();

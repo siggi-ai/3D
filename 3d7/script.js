@@ -30,7 +30,7 @@ function init() {
         4,5,6,    6,7,4
     ];
     
-    const geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 2 );
+    const geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 1 );
     const geometryMaterial= new THREE.MeshLambertMaterial({color: 0xffffff});
 
     var polyhedron = new THREE.Mesh(geometry, geometryMaterial);
@@ -46,8 +46,8 @@ function init() {
     spotLight.shadow.camera.near = 40;
     scene.add(spotLight);
 
-    var ambientLight = new THREE.AmbientLight(0x000000)
-    scene.add(ambientLight);
+    const ambientLight = new THREE.AmbientLight( 0x303050 );
+    scene.add( ambientLight );
 
     camera.position.set(-30, 40, 30);
     camera.lookAt(scene.position);

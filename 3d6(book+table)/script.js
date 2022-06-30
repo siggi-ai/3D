@@ -19,7 +19,7 @@ function init() {
     //plane1 (table)
     var planeGeometry = new THREE.PlaneGeometry(35, 75);
     var planeMaterial = new THREE.MeshLambertMaterial({
-        color: 0x16bd00,
+        color: 0xffae23,
     });
 
     console.log(planeMaterial.color);

@@ -1,3 +1,5 @@
+(function () {
+
 var camera;
 var scene;
 var renderer;
@@ -181,14 +183,19 @@ function init() {
 
     function renderScene() {
         stats.update();
+        trackballControls.update(clock.getDelta());
+        requestAnimationFrame(renderScene);
         renderer.render(scene, camera);
     }
 
 
     document.getElementById("webgl-output").appendChild(renderer.domElement);
+    var trackballControls = initTrackballControls(camera, renderer);
+    var clock = new THREE.Clock();
 
     renderScene();
 }
 
 init()
 
+})();

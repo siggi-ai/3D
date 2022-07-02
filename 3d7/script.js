@@ -46,7 +46,7 @@ function init() {
     spotLight.shadow.camera.near = 40;
     scene.add(spotLight);
 
-    const ambientLight = new THREE.AmbientLight( 0x303050 );
+    const ambientLight = new THREE.AmbientLight( 0x302050 );
     scene.add( ambientLight );
 
     camera.position.set(-30, 40, 30);

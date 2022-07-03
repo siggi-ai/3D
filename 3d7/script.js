@@ -39,7 +39,7 @@ function init() {
 
     //Light
     var spotLight = new THREE.SpotLight(0xFFFFFF);
-    spotLight.position.set(-40, 40, 15);
+    spotLight.position.set(-40, 10, 15);
     spotLight.castShadow = true;
     spotLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
     spotLight.shadow.camera.far = 130;
